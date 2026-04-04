@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.MYSQLPORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || "your_jwt_secret";
 
 // Middleware
@@ -17,10 +17,10 @@ app.use(express.json());
 
 // MySQL Connection
 const db = mysql.createConnection({
-  host: process.env.DB_HOST ,
-  user: process.env.DB_USER ,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME ,
+  host: process.env.MYSQLHOST ,
+  user: process.env.MYSQLUSER ,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
 });
 
 db.connect((err) => {
