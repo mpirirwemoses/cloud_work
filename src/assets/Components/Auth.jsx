@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Auth = () => {
-  const BASE_URL = "";
+  
   const [isLogin, setIsLogin] = useState(true);
 
   const [form, setForm] = useState({
@@ -16,8 +16,8 @@ const Auth = () => {
 
   const handleSubmit = async () => {
     const url = isLogin
-  ? `${BASE_URL}/login`
-  : `${BASE_URL}/signup`;
+  ? `/login`
+  : `/signup`;
 
     const body = isLogin
       ? { email: form.email, password: form.password }
