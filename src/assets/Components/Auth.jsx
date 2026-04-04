@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Auth = () => {
-  const BASE_URL = "https://https://cloudwork-production.up.railway.app/";
+  const BASE_URL = "https://cloudwork-production.up.railway.app/";
   const [isLogin, setIsLogin] = useState(true);
 
   const [form, setForm] = useState({
